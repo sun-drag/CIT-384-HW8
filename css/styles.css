@@ -1,0 +1,362 @@
+/* Color Palette
+#d68936 - header
+#d27649 - work experience
+#c96654 - education
+#9f4332 - page background
+#8b413e - footer
+*/
+
+/* Additional accent: #f6e4c6 - work experience backgrounds */
+
+/* Global styles 
+------------------------------------*/
+/* border box fix */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #9f4332;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding-top: 64px;
+    background-color: #d27649;
+    color: #1f1917;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin: 0 0 1rem;
+    font-family: "Oswald", Arial, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 1.75rem 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+/* Header & Footer 
+------------------------------------*/
+header {
+    background-color: #d68936;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+.profile-img {
+    height: auto;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    background-color: #8b413e;
+    color: #ffffff;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+    background-color: #d27649;
+}
+
+.experience-details {
+    font-weight: 600;
+}
+
+/* Education
+------------------------------------*/
+.education {
+    background: linear-gradient(110deg, rgba(201, 102, 84, 0.96), rgba(246, 228, 198, 0.72)),
+                url("../images/campus-background.svg") center / cover no-repeat;
+}
+
+/* Navigation & keyboard access
+------------------------------------*/
+section, header, footer, main {
+    scroll-margin-top: 90px;
+}
+
+a {
+    color: #71302e;
+    text-underline-offset: 4px;
+}
+
+a:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+}
+
+.skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    padding: 12px 18px;
+    background-color: #fff8ef;
+    transform: translateY(-160%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 10;
+    background-color: #8b413e;
+    box-shadow: 0 3px 12px rgb(31 25 23 / 12%);
+}
+
+.nav-wrap {
+    height: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 14px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.site-nav a {
+    color: #fff8ef;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 24px;
+}
+
+.nav-links a {
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Intro & section details
+------------------------------------*/
+header {
+    background-image: linear-gradient(120deg, #d68936, #efba73);
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #592a24;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+header h2 {
+    font-size: 1.75rem;
+}
+
+header .column-wide > p:not(.eyebrow) {
+    margin-top: 20px;
+}
+
+
+.work-experience h2 {
+    margin-bottom: 28px;
+}
+
+.job {
+    overflow: hidden;
+    margin-bottom: 28px;
+    padding: 28px;
+    border: 1px solid rgb(139 65 62 / 18%);
+    border-radius: 14px;
+    background-color: #f6e4c6;
+}
+
+.job:last-of-type {
+    margin-bottom: 0;
+}
+
+.job h3 {
+    margin-top: 0;
+}
+
+.job p, .job li {
+    overflow-wrap: anywhere;
+}
+
+.experience-dates {
+    color: #71302e;
+    font-size: 0.9rem;
+}
+
+.project-visual {
+    margin: 24px 0 0;
+}
+
+.project-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(139 65 62 / 15%);
+    border-radius: 10px;
+}
+
+.project-visual figcaption {
+    margin-top: 8px;
+    color: #71302e;
+    font-size: 0.8rem;
+}
+
+.contact-info {
+    margin-bottom: 18px;
+}
+
+.contact-info .fa-solid {
+    margin-right: 6px;
+}
+
+.contact-info a {
+    margin: 4px;
+    max-width: calc(100% - 8px);
+    overflow-wrap: anywhere;
+    border: 1px solid rgb(255 255 255 / 45%);
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    background-color: rgb(255 255 255 / 12%);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 700px) {
+    .nav-wrap {
+        padding: 12px 20px;
+        gap: 16px;
+    }
+
+    .nav-links {
+        column-gap: 16px;
+        font-size: 0.9rem;
+    }
+
+    .column-narrow, .column-wide {
+        width: 100%;
+        float: none;
+        padding-right: 0;
+        min-height: 0;
+    }
+
+    header .column-narrow {
+        max-width: 180px;
+        margin-bottom: 24px;
+    }
+
+    .job {
+        padding: 24px;
+    }
+
+    .job .column-narrow {
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgb(139 65 62 / 18%);
+    }
+
+    .job .experience-dates {
+        margin-bottom: 0;
+    }
+}
+
+/* Allow the PDF link to wrap without covering the page on narrow phones. */
+@media (max-width: 430px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .site-nav {
+        height: 100px;
+    }
+
+    .nav-links {
+        max-width: 280px;
+        row-gap: 4px;
+    }
+
+    section, header, footer, main {
+        scroll-margin-top: 120px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
